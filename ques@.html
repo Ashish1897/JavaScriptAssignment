@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+    <script>
+        function writeToPage(){
+
+                var fn = document.getElementById("fname").value;
+                var un = document.getElementById("uname").value;
+                var em = document.getElementById("major").value;
+
+                document.getElementById("username").innerHTML = un;
+                document.getElementById("name").innerHTML = fn;
+                document.getElementById("maj").innerHTML = em;
+                
+        }
+    </script>
+    
+</head>
+<body>
+    <div>
+        <form name="firstform" id="firstform" method="post">
+            <p id="p1">
+                <label>Full Name</label>
+                <input type="text" name="fname" id="fname" size="35" value="" />
+            </p>
+
+            <p id="p2">
+                <label>Username</label><input type="text" name="uname" id="uname" size="35" value="" />
+            </p>
+
+            <p id="p3">
+                <label>Major</label><input type="text" name="major" id="major" size="35" value="" />
+            </p>
+
+            <button type="button" onclick="writeToPage();">Add Comment</button>
+        </form>
+    </div>
+<br>
+<br>
+    <div id="pdada">
+        <table border="2px">
+            <tr>
+                <th>NAME</th>
+                <th>USER</th>
+                <th>MAJOR</th>
+            </tr>
+    
+            <tr>
+                <td id="name"></td>
+                <td id="username"></td>
+                <td id="maj"></td>
+                
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

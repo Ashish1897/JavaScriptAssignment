@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <script>
+        function CurrentLocalTime() {    
+            var dte = new Date();      
+            console.log(dte.toLocaleTimeString());
+        }
+        var interval = setInterval(CurrentLocalTime,1000);
+
+        function stopClock() {  
+    clearInterval(interval);  
+} 
+    </script>
+   
+</head>
+<body>
+    <h1>The clock can be seen in the console log.</h1>
+
+    <button onclick="stopClock();"> Stop Clock</button>
+</body>
+</html>

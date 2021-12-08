@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRow = document.getElementById('show');
+
+			var NewRow = AddRow.insertRow(n);
+
+			list1[x] = document.getElementById("fname").value;
+			list2[x] = document.getElementById("lname").value;
+			list3[x] = document.getElementById("age").value;
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+
+			n++;
+			x++;
+		}
+
+	</script>
+	<style>
+		#form{
+			background-color: darkseagreen;
+			padding: 50px;
+			float: left;
+		}
+		#tb{
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<section id="form">
+		<table id="tb" style="color: black; background-color:gold;"border="3px">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+				<tr>
+					<th>Age</th>
+					<td><input type="text" name="age" id="age"></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center; border: 2px;"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+				</tr>
+			</tbody>
+		</table>
+<br>
+<br>
+		<table style="background-color:goldenrod;" border="1" id="show">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+		</table>
+	</section>
+	
+	
+</body>
+</html>
